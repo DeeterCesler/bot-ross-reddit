@@ -1,6 +1,8 @@
 import praw
 import config
 
+print "It's running"
+
 def bot_login():
     r = praw.Reddit(username = config.username,
             password = config.password,
@@ -10,6 +12,7 @@ def bot_login():
     return r
 
 def run_bot(r):
+    print "Logged in..."
     for comment in r.subreddit("test").comments(limit=10):
         if "happy little" in comment.body:
             print "String found"
