@@ -20,3 +20,4 @@ def run_bot(r):
 
 r = bot_login()
 run_bot(r)
+print "...finished"
