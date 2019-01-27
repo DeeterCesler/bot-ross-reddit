@@ -1,4 +1,4 @@
-username = "DeeterC"
-password = "0vB!Metzge"
-client_id = "xLaAbeWd1mKwPw"
-client_secret = "oPu9D9VFVxdyYbo8OLXEovRA1wE"
+username = "BobRossQuoteBot"
+password = "thisismypasswordtherearemanylikeitbutthisoneismine"
+client_id = "igIIXA6xXenj-Q"
+client_secret = "uv-ILFKk6qBHGGrFmttQ6UoRfwc"

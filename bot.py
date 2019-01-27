@@ -76,11 +76,13 @@ def bot_login():
             user_agent = "DeeterC's Bob Ross quote responder v0.1")
     return r
 
+
+
 def run_bot(r, comments_replied_to):
     print "Logged in..."
 
-    for comment in r.subreddit("test").comments(limit=10):
-        if "happy little" or "happy accident" or "Bob Ross" or "bob ross" in comment.body and comment.id not in comments_replied_to and not comment.author == r.user.me():
+    for comment in r.subreddit("test").comments(limit=1):
+        if "happy little" in comment.body and comment.id not in comments_replied_to and not comment.author == r.user.me():
             # find a random quote from an array above
             chosenNumber = random.randint(0,(len(quoteList)-1))
             # save that quote as a variable
@@ -94,7 +96,7 @@ def run_bot(r, comments_replied_to):
             comments_replied_to.append(comment.id)
     print "Sleeping for ten seconds..."
     time.sleep(10)
-    # time.sleep(43200)
+    # time.sleep(43200) is 12 hours
 
 r = bot_login()
 comments_replied_to = []
