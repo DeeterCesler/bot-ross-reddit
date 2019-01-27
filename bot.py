@@ -81,16 +81,13 @@ def bot_login():
 def run_bot(r, comments_replied_to):
     print "Logged in..."
 
-    for comment in r.subreddit("test").comments(limit=1):
-        if "happy little" in comment.body and comment.id not in comments_replied_to and not comment.author == r.user.me():
-            # find a random quote from an array above
-            chosenNumber = random.randint(0,(len(quoteList)-1))
-            # save that quote as a variable
-            chosenQuote = quoteList[chosenNumber]
-            # comment reply that quote
-            # find a way to host this bot not on my computer 
+    for comment in r.subreddit("test").comments(limit=10):
+        if "happy little" in comment.body:
             print "String found"
-            fullComment = '"' + chosenQuote  + '"' + ' - Bob Ross'
+            #  and comment.id not in comments_replied_to and not comment.author == r.user.me()
+            randomNumber = random.randint(0,(len(quoteList)-1))
+            randomQuote = quoteList[randomNumber]
+            fullComment = '"' + randomQuote + '"' + ' - Bob Ross'
             print fullComment
             comment.reply(fullComment)
             comments_replied_to.append(comment.id)
