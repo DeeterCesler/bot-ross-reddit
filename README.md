@@ -1,5 +1,5 @@
-#Bot Ross
-###a comment reply bot built in Pythong
+# Bot Ross
+### a comment reply bot built in Pythong
 
 
 This is a simple bot built to reply to any comment that mentions "happy little" with a random Bob Ross quote.
